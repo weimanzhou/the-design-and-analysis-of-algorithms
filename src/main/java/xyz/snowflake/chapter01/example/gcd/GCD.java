@@ -234,6 +234,19 @@ public class GCD {
         return m;
     }
 
+    /**
+     * 更相减损术的非递归实现
+     *
+     * @param m m
+     * @param n n
+     * @return  m 和 n 的最大公约数
+     */
+    public int gcd42(int m, int n) {
+        if (n == m) return m;
+        if (n > m) return gcd42(m, n - m);
+        else return gcd42(n, m - n);
+    }
+
     //————————————————
     //版权声明：本文为CSDN博主「keep_belief」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
     //原文链接：https://blog.csdn.net/qq_34992845/article/details/53043339

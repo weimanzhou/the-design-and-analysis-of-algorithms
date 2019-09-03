@@ -69,7 +69,7 @@ public class GCDTest {
         // -----------------------------------------
         // 通过更相减损术的方法来求 m 和 n 的最大因子数
         // -----------------------------------------
-        int factor = gcd.gcd4(M, N);
+        int factor = gcd.gcd42(M, N);
         System.out.println("--------------------更相减损术--------------------");
         System.out.println(M + " 和 " + N + " 的最大公因子为: " + factor);
     }
