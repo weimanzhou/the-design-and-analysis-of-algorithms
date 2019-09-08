@@ -1,9 +1,6 @@
-package xyz.snowflake.chapter01.exercise.ex04;
+package xyz.snowflake.chapter01.exercise1.ex04;
 
-import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author snowflake

@@ -1,19 +1,17 @@
-package xyz.snowflake.chapter01.exercise.ex12;
+package xyz.snowflake.chapter01.exercise1.ex12;
 
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * @author snowflake
  * @email 278121951@qq.com
  * @create-date 2019-09-04 16:45
  */
-public class Ex12Test {
+public class EX12Test {
 
-    private final Ex12 ex = new Ex12();
+    private final EX12 ex = new EX12();
 
     /** 门的个数 */
     private final int n = 10;

@@ -1,4 +1,4 @@
-package xyz.snowflake.chapter01.exercise.ex04;
+package xyz.snowflake.chapter01.exercise1.ex04;
 
 /**
  * 设计一计算 floor[sqrt(n)] 的算法，n 使 任意正整数，除了赋值和比较运算，该算法只能用到基本的四则运算操作
@@ -77,12 +77,13 @@ public class EX04 {
         // 判断 t 和 n / t 的差,也就是求精度
         while (Math.abs(t - n / t) > 1e-10)
             // t(长) + (n/t)宽 然后 除以 2,求出新边,赋值给 t
-            t = (n / t + t) / 2.0;
+            t = (t + n / t) / 2.0;
         System.out.println(t);
         return (int) t;
-//        ————————————————
-//        版权声明：本文为CSDN博主「SpikeKing」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-//        原文链接：https://blog.csdn.net/caroline_wendy/article/details/17114939
+        // 参考博文
+        // ————————————————
+        // 版权声明：本文为CSDN博主「SpikeKing」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+        // 原文链接：https://blog.csdn.net/caroline_wendy/article/details/17114939
     }
 
 }

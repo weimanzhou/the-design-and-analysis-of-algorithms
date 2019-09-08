@@ -1,4 +1,4 @@
-package xyz.snowflake.chapter01.exercise.ex12;
+package xyz.snowflake.chapter01.exercise1.ex12;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @email 278121951@qq.com
  * @create-date 2019-09-04 16:25
  */
-public class Ex12 {
+public class EX12 {
 
     /**
      * 返回锁着的门的编号集合

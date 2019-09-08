@@ -35,13 +35,14 @@ public class GCD {
         int max = 1;
         for (int i1 : arrm) {
             for (int j = 0; j < arrn.length; j++) {
-                if (i1 == arrn[j]) {
+                if (arrn[j] != 0 && i1 == arrn[j]) {
                     max = max * i1;
                     arrn[j] = 0;
                     break;
                 }
             }
         }
+
         return max;
     }
 
@@ -51,7 +52,7 @@ public class GCD {
      * @param m m
      * @return  m 的全部因子
      */
-    private static int[] resolve(int m) {
+    private static int[] resolve2(int m) {
         List<Integer> list = new ArrayList<>();
         for (int i = 2; i <= Math.sqrt(m); i++) {
             while (m % i == 0) {
@@ -61,6 +62,29 @@ public class GCD {
         }
         list.add(m);
         return list.stream().mapToInt(Integer::valueOf).toArray();
+    }
+
+    private static int[] resolve(int m) {
+        int[] arr = new int[20];
+        int num = 0;
+        int temp = m;
+        for (int i = 2; i <= temp / 2; i++) {
+            while (m % i == 0) {
+                if (m == i) {
+                    arr[num] = i;
+                    break;
+                }else {
+                    m = m / i;
+                    arr[num] = i;
+                    num = num + 1;
+                }
+            }
+        }
+        arr[num] = m;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "  ");
+        }
+        return arr;
     }
 
     /**
