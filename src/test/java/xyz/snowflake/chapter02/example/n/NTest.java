@@ -2,8 +2,6 @@ package xyz.snowflake.chapter02.example.n;
 
 import org.junit.Test;
 
-import static javafx.scene.input.KeyCode.F;
-
 /**
  * @author snowflake
  * @email 278121951@qq.com
