@@ -20,6 +20,4 @@ public class FBNQ {
         else return fbnq(n - 1) + fbnq(n - 2);
     }
 
-
-
 }
