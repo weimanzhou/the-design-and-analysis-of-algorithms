@@ -22,7 +22,6 @@ public class QuickSelect {
      */
     public int quickSelect(int[] nums, int i , int j, int k) {
         int s = new LomutoPartition().lomutoPartition(nums, i, j);
-        System.out.println(Arrays.toString(nums));
         if (s == i + k - 1) return nums[s];
         else if (s > i + k - 1) return quickSelect(nums, i, s -1, k);
         else return quickSelect(nums, s + 1, j, i + k - 1 - s);
