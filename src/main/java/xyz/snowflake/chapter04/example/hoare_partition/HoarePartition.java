@@ -21,13 +21,20 @@ public class HoarePartition {
      */
     public int hoarePartition(int[] arr, int l, int r) {
         int x = arr[l];
+        // 没有设置 i = l + 1，能够保证在第一次交换的时候，能将一个比 x 小的数与 l 位置交换。
         int i = l;
+        // 这个毫无疑问，从右下标开始遍历
         int j = r;
         while (true) {
+            // 循环条件：如果当前 j 指向的值大于等于 x，则下标左移
             while (j > l && arr[j] >= x) j--;
+            // 循环条件：如果当前 i 指向的值小于 x，则下标右移
             while (i < r && arr[i] < x) i++;
+            // 如果 j 仍然大于 i，才交换该两个数，之所以没有调整下标，
+            // 是因为下一次循环中，会调整下标。
             if (j > i) MathUtil.swap(arr, i, j);
-            else return j;
+            // 否则则代表划分已经完成，可以直接返回 j
+            else return i;
         }
     }
 

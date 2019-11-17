@@ -21,7 +21,7 @@ public class LomutoPartition {
         int p = nums[i];
         int s = i;
         for (int k = i + 1; k <= j; k++) {
-            if (nums[k] < p) {
+            if (nums[k] >= p) {
                 s++;
                 MathUtil.swap(nums, s, k);
             }

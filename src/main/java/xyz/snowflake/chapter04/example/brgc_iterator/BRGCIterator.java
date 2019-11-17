@@ -2,6 +2,7 @@ package xyz.snowflake.chapter04.example.brgc_iterator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author snowflake
@@ -28,7 +29,10 @@ public class BRGCIterator {
         int index = index(1);
         if (nums[index] == 0) nums[index] = 1;
         else nums[index] = 0;
-        return ans;
+        return ans/*.stream()
+                .mapToInt(e -> Integer.parseInt(e, 2))
+                .boxed()
+                .collect(Collectors.toList())*/;
     }
 
     public int index(int n) {

@@ -4,6 +4,7 @@ import org.junit.Test;
 import xyz.snowflake.chapter04.example.josephus_problem_by_math.JosephusProblemByMath;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 import static org.junit.Assert.*;
 
@@ -18,7 +19,7 @@ public class JosephusProblemTest {
 
     @Test
     public void josephusProblem() {
-        int[] persons6 = {1, 2, 3, 4, 5, 6};
+        int[] persons6 = Stream.iterate(1, i -> i + 1).limit(40).mapToInt(Integer::intValue).toArray();
         System.out.println(Arrays.toString(persons6) + " : " +jose.josephusProblem(persons6));
 
         int[] persons7 = {1, 2, 3, 4, 5, 6, 7};

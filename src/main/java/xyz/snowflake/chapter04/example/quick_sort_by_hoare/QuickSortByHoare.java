@@ -1,6 +1,7 @@
 package xyz.snowflake.chapter04.example.quick_sort_by_hoare;
 
 import xyz.snowflake.chapter04.example.hoare_partition.HoarePartition;
+import xyz.snowflake.chapter04.example.hoare_partition_by_book.HoarePartitionByBook;
 import xyz.snowflake.chapter04.example.lomuto_partition.LomutoPartition;
 
 import java.util.Arrays;
@@ -26,6 +27,7 @@ public class QuickSortByHoare {
     private void quickSort(int[] arr, int i, int j) {
         if (i >= j) return;
         int s = new HoarePartition().hoarePartition(arr, i, j);
+        System.out.println(s);
         quickSort(arr, i, s);
         quickSort(arr, s + 1, j);
     }

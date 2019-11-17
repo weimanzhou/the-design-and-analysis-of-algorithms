@@ -1,6 +1,5 @@
 package xyz.snowflake.chapter03.exercise4.ex04;
 
-import org.junit.Test;
 import xyz.snowflake.util.MathUtil;
 
 import java.util.*;

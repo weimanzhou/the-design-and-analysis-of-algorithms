@@ -2,6 +2,10 @@ package xyz.snowflake.chapter04.example.quick_select;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.PriorityQueue;
+
 /**
  * @author snowflake
  * @email 278121951@qq.com
@@ -13,8 +17,10 @@ public class QuickSelectTest {
 
     @Test
     public void quickSelect() {
-        int[] arr = new int[]{3, 5, 4, 8, 2, 1, 9};
-        int ans = qs.quickSelect(arr, 0, arr.length - 1, 4);
+
+
+        int[] arr = new int[]{1, 2, 3, 4, 5, 6};
+        int ans = qs.quickSelect(arr, 0, arr.length - 1, 2);
         System.out.println(ans);
     }
 
